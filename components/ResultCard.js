@@ -55,8 +55,8 @@ export default function ResultCard({ result, requested, onRent }) {
             <div className="price">{inr(listing.price)} <small>per occasion</small></div>
             <div className="deposit">{inr(listing.deposit)} refundable deposit</div>
           </div>
-          <button className="btn" onClick={() => onRent(result)} disabled={requested}>
-            {requested ? 'Requested' : 'Request to rent'}
+          <button className="btn" onClick={() => onRent(result)} disabled={requested || listing.mine}>
+            {listing.mine ? 'Your listing' : requested ? 'Requested' : 'Request to rent'}
           </button>
         </div>
       </div>

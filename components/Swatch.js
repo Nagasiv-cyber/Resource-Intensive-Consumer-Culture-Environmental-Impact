@@ -8,7 +8,7 @@ export default function Swatch({ listing }) {
   return (
     <div className={`swatch swatch-${cat.pattern}`} style={{ '--a': a, '--b': b }} role="img" aria-label={`${cat.label} in ${listing.title}`}>
       <span className="swatch-label">{cat.label}</span>
-      {listing.source === 'local' && <span className="swatch-label swatch-new">Your listing</span>}
+      {(listing.mine || listing.source === 'local') && <span className="swatch-label swatch-new">Your listing</span>}
     </div>
   );
 }

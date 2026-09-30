@@ -5,7 +5,9 @@ import { usePathname } from 'next/navigation';
 const LINKS = [
   { href: '/', label: 'Find an outfit' },
   { href: '/list', label: 'Lend an outfit' },
-  { href: '/how', label: 'How matching works' },
+  { href: '/rentals', label: 'My rentals' },
+  { href: '/inbox', label: 'Lender inbox' },
+  { href: '/how', label: 'How it works' },
 ];
 
 export default function Header() {
